@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ProfileMenu">
+
+
+    <top>
+        <HBox alignment="CENTER">
+            <Label alignment="CENTER" text="PACMAN" textAlignment="CENTER" textFill="#000000">
+                <font>
+                    <Font name="Arial Bold" size="18.0"/>
+                </font>
+            </Label>
+            <padding>
+                <Insets bottom="20.0" top="20.0"/>
+            </padding>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER">
+            <VBox>
+                <HBox alignment="CENTER">
+                    <Label alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="old password:">
+                        <HBox.margin>
+                            <Insets right="10.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <TextField fx:id="oldPasswordTextBox" alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="150.0"
+                               promptText="old password"/>
+                    <VBox.margin>
+                        <Insets bottom="5.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <Label alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="new password:">
+                        <HBox.margin>
+                            <Insets right="10.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <TextField fx:id="newPasswordTextBox" alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="150.0"
+                               promptText="new password"/>
+                    <VBox.margin>
+                        <Insets bottom="5.0"/>
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <Label alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="re-enter new password:">
+                        <HBox.margin>
+                            <Insets right="10.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <TextField fx:id="reNewPasswordTextBox" alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="150.0"
+                               promptText="new password"/>
+                </HBox>
+                <padding>
+                    <Insets bottom="20.0"/>
+                </padding>
+            </VBox>
+
+            <HBox alignment="CENTER">
+                <Button fx:id="changePasswordButton" alignment="CENTER" onMouseClicked="#changePassword"
+                        prefHeight="26.0" prefWidth="120.0" text="Change Password">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="deleteUser" alignment="CENTER" onMouseClicked="#deleteUser" prefHeight="26.0"
+                        prefWidth="120.0" text="Delete User">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="backButton" alignment="CENTER" onMouseClicked="#back" prefHeight="26.0" prefWidth="120.0"
+                        text="Back">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+
+            <padding>
+                <Insets bottom="20.0"/>
+            </padding>
+        </VBox>
+    </center>
+
+
+</BorderPane>

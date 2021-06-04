@@ -1,0 +1,12 @@
+.root {
+    -fx-background-color: #141414;
+    -fx-font-family: "Arial";
+}
+
+.button {
+    -fx-background-color: #e8d71e;
+}
+
+.label {
+    -fx-text-fill: #d71b3b;
+}

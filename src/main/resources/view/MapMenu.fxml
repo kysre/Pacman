@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MapMenu">
+
+
+    <top>
+        <VBox>
+            <HBox alignment="CENTER">
+                <Label alignment="CENTER" text="PACMAN" textAlignment="CENTER" textFill="#000000">
+                    <font>
+                        <Font name="Arial Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <padding>
+                    <Insets bottom="5.0" top="20.0"/>
+                </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+                <Label alignment="CENTER" text="please choose your desired map and lives:" textAlignment="CENTER"
+                       textFill="#000000">
+                    <font>
+                        <Font name="Arial" size="14.0"/>
+                    </font>
+                </Label>
+                <padding>
+                    <Insets bottom="10" left="20"/>
+                </padding>
+            </HBox>
+        </VBox>
+    </top>
+
+    <right>
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER">
+                <Button fx:id="nextMapButton" alignment="CENTER" onMouseClicked="#nextMap" prefHeight="80.0"
+                        prefWidth="70.0" text="Next">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </right>
+
+    <center>
+        <GridPane fx:id="mapBoard" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER"/>
+            </rowConstraints>
+        </GridPane>
+    </center>
+
+    <left>
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER">
+                <Button fx:id="previousMapButton" alignment="CENTER" onMouseClicked="#previousMap" prefHeight="80.0"
+                        prefWidth="70.0" text="Previous">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </left>
+
+    <bottom>
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER">
+                <Button fx:id="generateMapButton" alignment="CENTER" onMouseClicked="#generateMap" prefHeight="26.0"
+                        prefWidth="150.0" text="Generate New Map">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="saveMapButton" alignment="CENTER" onMouseClicked="#saveMap" prefHeight="26.0"
+                        prefWidth="150.0" text="Save Map">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER">
+                <HBox alignment="CENTER">
+                    <Button fx:id="decreaseLifeButton" alignment="CENTER" onMouseClicked="#decreaseLife"
+                            prefHeight="26.0" prefWidth="80.0" text="-">
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                        <effect>
+                            <DropShadow/>
+                        </effect>
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font name="System Bold" size="12.0"/>
+                        </font>
+                    </Button>
+                </HBox>
+                <HBox>
+                    <GridPane fx:id="lifeBoard" prefHeight="36" prefWidth="180">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="CENTER"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints valignment="CENTER"/>
+                        </rowConstraints>
+                    </GridPane>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <Button fx:id="increaseLifeButton" alignment="CENTER" onMouseClicked="#increaseLife"
+                            prefHeight="26.0" prefWidth="80.0" text="+">
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                        <effect>
+                            <DropShadow/>
+                        </effect>
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font name="System Bold" size="12.0"/>
+                        </font>
+                    </Button>
+                </HBox>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="backButton" alignment="CENTER" onMouseClicked="#back" prefHeight="26.0"
+                        prefWidth="80.0" text="Back">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="startGameButton" alignment="CENTER" onMouseClicked="#startGame" prefHeight="26.0"
+                        prefWidth="80.0" text="Start Game">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

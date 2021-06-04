@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GameMenu">
+
+    <top>
+        <VBox>
+            <HBox alignment="CENTER">
+                <Label alignment="CENTER" text="PACMAN" textAlignment="CENTER" textFill="#000000">
+                    <font>
+                        <Font name="Arial Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <padding>
+                    <Insets top="20.0"/>
+                </padding>
+            </HBox>
+
+            <BorderPane>
+                <right>
+                    <HBox alignment="CENTER_RIGHT">
+                        <Label alignment="CENTER" text="points: " textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Bold" size="13"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="pointsLabel" alignment="CENTER" text="0" textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Bold" size="13"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets right="50.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <padding>
+                            <Insets bottom="10.0"/>
+                        </padding>
+                    </HBox>
+                </right>
+                <center>
+                    <HBox alignment="CENTER">
+                        <GridPane fx:id="lifeBoard" prefHeight="36" prefWidth="180">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="CENTER"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints valignment="CENTER"/>
+                            </rowConstraints>
+                        </GridPane>
+                    </HBox>
+                </center>
+                <left>
+                    <HBox alignment="CENTER_RIGHT">
+                        <Label alignment="CENTER" text="username: " textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Bold" size="13"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="50.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="usernameLabel" alignment="CENTER" text="" textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Bold" size="13"/>
+                            </font>
+                        </Label>
+                        <padding>
+                            <Insets bottom="10.0"/>
+                        </padding>
+                    </HBox>
+                </left>
+            </BorderPane>
+        </VBox>
+    </top>
+
+    <center>
+        <GridPane fx:id="gameBoard" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER"/>
+            </rowConstraints>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER">
+            <Label alignment="CENTER"
+                   text="Press any key to start game when paused and press ESC to save and quit game."
+                   textAlignment="CENTER">
+                <font>
+                    <Font name="Arial" size="12"/>
+                </font>
+                <HBox.margin>
+                    <Insets left="50.0"/>
+                </HBox.margin>
+            </Label>
+            <padding>
+                <Insets bottom="10.0"/>
+            </padding>
+        </HBox>
+    </bottom>
+
+
+</BorderPane>

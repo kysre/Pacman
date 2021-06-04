@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.MainMenu"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="CENTER">
+            <Label alignment="CENTER" text="PACMAN" textAlignment="CENTER" textFill="#000000">
+                <font>
+                    <Font name="Arial Bold" size="18.0"/>
+                </font>
+            </Label>
+            <padding>
+                <Insets bottom="20.0" top="20.0"/>
+            </padding>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER">
+                <Button fx:id="resumeGameButton" alignment="CENTER" onMouseClicked="#resumeGame" prefHeight="26.0"
+                        prefWidth="100.0" text="Resume Game">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="startGameButton" alignment="CENTER" onMouseClicked="#startGame" prefHeight="26.0"
+                        prefWidth="100.0" text="Start Game">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="scoreboardButton" alignment="CENTER" onMouseClicked="#scoreboard" prefHeight="26.0"
+                        prefWidth="100.0" text="Scoreboard">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="profileButton" alignment="CENTER" onMouseClicked="#profile" prefHeight="26.0"
+                        prefWidth="100.0" text="Profile">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button fx:id="logoutButton" alignment="CENTER" onMouseClicked="#logout" prefHeight="26.0"
+                        prefWidth="100.0" text="Logout">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+            <padding>
+                <Insets bottom="20.0"/>
+            </padding>
+        </VBox>
+    </center>
+
+
+</BorderPane>
